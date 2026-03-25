@@ -10,12 +10,6 @@ You can install the package via composer:
 composer require mrwang211/pinyin-pro
 ```
 
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="pinyin-pro-config"
-```
-
 ## Usage
 
 ```php
