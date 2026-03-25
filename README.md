@@ -19,7 +19,7 @@ php artisan vendor:publish --tag="pinyin-pro-config"
 ## Usage
 
 ```php
-$pinyinPro = new Mrwang211\PinyinProBuilder()->build();
+$pinyinPro = new Mrwang211\PinyinPro\PinyinProBuilder->build();
 echo $pinyinPro->convert('pin1 yin1'); // pīn yīn
 ```
 
