@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mrwang211\\PinyinPro\\": "src/",
+            "Mrwang211\\PinyinPro\\": "src/"
         }
     },
     "autoload-dev": {
