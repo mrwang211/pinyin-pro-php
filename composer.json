@@ -58,16 +58,7 @@
             "phpstan/extension-installer": true
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Mrwang211\\PinyinPro\\PinyinProServiceProvider"
-            ],
-            "aliases": {
-                "PinyinPro": "Mrwang211\\PinyinPro\\Facades\\PinyinPro"
-            }
-        }
-    },
+    "extra": {},
     "minimum-stability": "dev",
     "prefer-stable": true
 }
