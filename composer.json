@@ -39,8 +39,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Mrwang211\\PinyinPro\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Mrwang211\\PinyinPro\\Tests\\": "tests/"
         }
     },
     "scripts": {
