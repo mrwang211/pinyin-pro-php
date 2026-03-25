@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "mrwang211/pinyin-pro",
+    "description": "Partial port of pinyin-pro from https://github.com/zh-lx/pinyin-pro",
     "keywords": [
-        ":vendor_name",
+        "mrwang211",
         "laravel",
-        ":package_slug"
+        "pinyin-pro"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/mrwang211/pinyin-pro",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "mrwang211",
+            "email": "86845476+Iampersoncool@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -30,18 +30,16 @@
         "pestphp/pest-plugin-laravel": "^4.0",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0",
-        "spatie/laravel-ray": "^1.35"
+        "phpstan/phpstan-phpunit": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Mrwang211\\PinyinPro\\": "src/",
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Mrwang211\\PinyinPro\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Mrwang211\\PinyinPro\\PinyinProServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "PinyinPro": "Mrwang211\\PinyinPro\\Facades\\PinyinPro"
             }
         }
     },
