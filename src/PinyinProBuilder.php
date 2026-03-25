@@ -4,15 +4,11 @@ namespace Mrwang211\PinyinPro;
 
 class PinyinProBuilder
 {
-    private const string DEFAULT_SEPARATOR = ' ';
-
-    private const string DEFAULT_FORMAT = 'numToSymbol';
-
     private PinyinPro $pinyinProInstance;
 
     public function __construct()
     {
-        $this->pinyinProInstance = new PinyinPro(self::DEFAULT_SEPARATOR, self::DEFAULT_FORMAT);
+        $this->pinyinProInstance = new PinyinPro;
     }
 
     public function withSeparator(string $separator): static
@@ -31,14 +27,6 @@ class PinyinProBuilder
 
     public function build(): PinyinPro
     {
-        if ($this->pinyinProInstance->getSeparator() == null) {
-            $this->pinyinProInstance->setSeparator(self::DEFAULT_SEPARATOR);
-        }
-
-        if ($this->pinyinProInstance->getFormat() == null) {
-            $this->pinyinProInstance->setFormat(self::DEFAULT_FORMAT);
-        }
-
         return $this->pinyinProInstance;
     }
 }

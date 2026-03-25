@@ -8,7 +8,7 @@ class PinyinPro
 
     private string $format;
 
-    public function __construct($separator, $format)
+    public function __construct(string $separator = ' ', string $format = 'numToSymbol')
     {
         $this->separator = $separator;
         $this->format = $format;
