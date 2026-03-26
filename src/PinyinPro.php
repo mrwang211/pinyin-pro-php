@@ -65,12 +65,12 @@ class PinyinPro
 
     private static function formatNumToSymbol(string $pinyin): string
     {
-        $lastChar = substr($pinyin, -1);
+        $lastChar = mb_substr($pinyin, -1);
 
         if (ctype_digit($lastChar) && (int) $lastChar <= 4) {
             foreach (array_keys(ToneMap::DEFAULT_TONE_MAP) as $key) {
                 if (str_contains($pinyin, $key)) {
-                    return str_replace($key, ToneMap::DEFAULT_TONE_MAP[$key][$lastChar], substr($pinyin, 0, -1));
+                    return str_replace($key, ToneMap::DEFAULT_TONE_MAP[$key][$lastChar], mb_substr($pinyin, 0, -1));
                 }
             }
         }
