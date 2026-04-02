@@ -4,6 +4,28 @@ use Mrwang211\PinyinPro\PinyinProBuilder;
 
 describe('PinyinPro', function () {
     describe('convert', function () {
+        test('neutral tone', function () {
+            $pinyinPro = new PinyinProBuilder()->build();
+            $result1 = $pinyinPro->convert('pin0');
+            $result2 = $pinyinPro->convert('dao5');
+
+            expect($result1)
+                ->toBe('pin')
+                ->and($result2)
+                ->toBe('dao');
+        });
+
+        test('no tone number', function () {
+            $pinyinPro = new PinyinProBuilder()->build();
+            $result1 = $pinyinPro->convert('bao');
+            $result2 = $pinyinPro->convert('gao');
+
+            expect($result1)
+                ->toBe('bao')
+                ->and($result2)
+                ->toBe('gao');
+        });
+
         test('default', function () {
             $pinyinPro = new PinyinProBuilder()->build();
             $result = $pinyinPro->convert('pin1 yin1');

@@ -67,11 +67,22 @@ class PinyinPro
     {
         $lastChar = mb_substr($pinyin, -1);
 
-        if (ctype_digit($lastChar) && (int) $lastChar <= 4) {
-            foreach (array_keys(ToneMap::DEFAULT_TONE_MAP) as $key) {
-                if (str_contains($pinyin, $key)) {
-                    return str_replace($key, ToneMap::DEFAULT_TONE_MAP[$key][$lastChar], mb_substr($pinyin, 0, -1));
-                }
+        if (
+            ! ctype_digit($lastChar) ||
+
+            // 0 <= $lastChar <= 5
+            (int) $lastChar > 5
+        ) {
+            return $pinyin;
+        }
+
+        if ($lastChar === '5') {
+            $lastChar = '0';
+        }
+
+        foreach (array_keys(ToneMap::DEFAULT_TONE_MAP) as $key) {
+            if (str_contains($pinyin, $key)) {
+                return str_replace($key, ToneMap::DEFAULT_TONE_MAP[$key][$lastChar], mb_substr($pinyin, 0, -1));
             }
         }
 
