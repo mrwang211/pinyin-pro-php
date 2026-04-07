@@ -70,7 +70,7 @@ class PinyinPro
         if (
             ! ctype_digit($lastChar) ||
 
-            // 0 <= $lastChar <= 5
+            // 0 <= (int) $lastChar <= 5
             (int) $lastChar > 5
         ) {
             return $pinyin;
