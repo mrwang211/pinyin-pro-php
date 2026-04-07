@@ -6,13 +6,17 @@ describe('PinyinPro', function () {
     describe('convert', function () {
         test('neutral tone', function () {
             $pinyinPro = new PinyinProBuilder()->build();
+
             $result1 = $pinyinPro->convert('pin0');
             $result2 = $pinyinPro->convert('dao5');
+            $result3 = $pinyinPro->convert('na3 r5');
 
             expect($result1)
                 ->toBe('pin')
                 ->and($result2)
-                ->toBe('dao');
+                ->toBe('dao')
+                ->and($result3)
+                ->toBe('nǎ r');
         });
 
         test('no tone number', function () {
